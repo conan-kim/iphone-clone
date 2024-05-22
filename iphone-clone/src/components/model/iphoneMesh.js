@@ -2,8 +2,8 @@
 
 import { useFBX } from "@react-three/drei";
 import { gsap } from "gsap";
-import { forwardRef, useEffect, useRef } from "react";
-import THREE, { Box3, Vector3 } from "three";
+import React, { forwardRef, useEffect } from "react";
+import { Box3, Vector3 } from "three";
 
 const IphoneMesh = forwardRef(({ type, scrollYProgress, setLoading }, ref) => {
   const iPhoneModelFbx = useFBX(
@@ -39,7 +39,9 @@ const IphoneMesh = forwardRef(({ type, scrollYProgress, setLoading }, ref) => {
     return () => {
       unsubscribe();
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [ref]);
+
   return (
     <primitive
       ref={ref}
@@ -50,5 +52,7 @@ const IphoneMesh = forwardRef(({ type, scrollYProgress, setLoading }, ref) => {
     />
   );
 });
+
+IphoneMesh.displayName = "IphoneMesh";
 
 export default IphoneMesh;

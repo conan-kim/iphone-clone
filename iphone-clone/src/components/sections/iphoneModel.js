@@ -39,10 +39,12 @@ const IphoneModel = () => {
 
   useEffect(() => {
     handleColor();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [color]);
 
   useEffect(() => {
     handleModel();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [model]);
 
   const handleColor = () => {

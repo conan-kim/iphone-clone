@@ -66,6 +66,7 @@ const CameraSection = () => {
             {CAROUSEL_IMAGES.map((_image, index) => {
               return (
                 <motion.div
+                  key={`carousel${index}`}
                   className="relative overflow-hidden"
                   initial={{
                     opacity: 0,
@@ -84,7 +85,7 @@ const CameraSection = () => {
                   }}
                   transition={{ duration: 0.5, ease: "easeOut" }}
                 >
-                  <Image src={_image.src} fill objectFit="cover" />
+                  <Image src={_image.src} fill objectFit="cover" alt="image" />
                 </motion.div>
               );
             })}
@@ -145,7 +146,12 @@ const CameraSection = () => {
               whileInView={{ opacity: 1, transition: { duration: 1 } }}
               viewport={{ amount: 0.2 }}
             >
-              <Image src="/assets/images/camera.jpg" fill objectFit="contain" />
+              <Image
+                src="/assets/images/camera.jpg"
+                fill
+                objectFit="contain"
+                alt="image"
+              />
             </motion.div>
           </div>
           <div className="flex flex-col flex-1 gap-4 items-start justify-center">

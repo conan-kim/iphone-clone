@@ -50,6 +50,7 @@ const Carousel = () => {
 
   useEffect(() => {
     isVideoPlaying ? playVideo() : pauseVideo();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isVideoPlaying]);
 
   const handleSlideChange = (e) => {
@@ -227,6 +228,7 @@ const CoreSection = () => {
     return () => {
       unsubscribeY();
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (

@@ -22,6 +22,7 @@ const FloatingPlusBtn = ({ title }) => {
       animate("button", { borderWidth: "0px" });
     };
     animateButton();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isInView]);
 
   return (

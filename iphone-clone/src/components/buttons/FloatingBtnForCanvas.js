@@ -17,6 +17,7 @@ const FloatingBtnForCanvas = ({ colors, color, setColor, model, setModel }) => {
     };
 
     animateButton();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isInView]);
 
   return (

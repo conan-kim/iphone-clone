@@ -32,6 +32,7 @@ const MainIntro = () => {
       y: 0,
       transition: { delay: 0.4, duration: 1 },
     });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [videoRef?.current?.readyState]);
 
   return (
