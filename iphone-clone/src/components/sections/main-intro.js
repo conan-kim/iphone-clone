@@ -59,7 +59,7 @@ const MainIntro = () => {
       </motion.div>
       <div className="relative w-full">
         <h1 className="mb-5 md:mb-0 md:absolute md:-top-1 md:text-3xl text-[#bdb7ad] w-full text-center tracking-tighter font-semibold">
-          iPhone 15 Pro
+          iPhone 15 Pro Max
         </h1>
         <video
           ref={videoRef}
